@@ -1,11 +1,9 @@
 <template>
   <div>
-    <h1>Hello</h1>
+    <h1>SVG测试</h1>
+    <svg-icon name="jurassic" color="pink" width="100px" height="100px"></svg-icon>
   </div>
 </template>
 <script setup lang="ts">
-import { Plus } from '@element-plus/icons-vue'
-console.log(import.meta.env);
-
 </script>
 <style scoped></style>
