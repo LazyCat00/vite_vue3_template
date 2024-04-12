@@ -6,14 +6,26 @@
       <!-- 登录标题 -->
       <h1 class="login-title">登录</h1>
       <!-- 登录表单 -->
-      <el-form :model="loginForm" :rules="loginRules" ref="loginFormRef" label-width="80px">
+      <el-form
+        :model="loginForm"
+        :rules="loginRules"
+        ref="loginFormRef"
+        label-width="80px"
+      >
         <!-- 用户名输入框 -->
         <el-form-item label="用户名" prop="username">
-          <el-input v-model="loginForm.username" placeholder="请输入用户名"></el-input>
+          <el-input
+            v-model="loginForm.username"
+            placeholder="请输入用户名"
+          ></el-input>
         </el-form-item>
         <!-- 密码输入框 -->
         <el-form-item label="密码" prop="password">
-          <el-input type="password" v-model="loginForm.password" placeholder="请输入密码"></el-input>
+          <el-input
+            type="password"
+            v-model="loginForm.password"
+            placeholder="请输入密码"
+          ></el-input>
         </el-form-item>
         <!-- 登录按钮 -->
         <el-form-item>
@@ -29,28 +41,33 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { ElForm, ElFormItem, ElInput, ElButton, ElCard, ElAlert } from 'element-plus';
+import { ref } from 'vue'
+import {
+  ElForm,
+  ElFormItem,
+  ElInput,
+  ElButton,
+  ElCard,
+  ElAlert,
+} from 'element-plus'
 
 // 定义登录表单相关数据
 const loginForm = ref({
   username: '',
-  password: ''
-});
+  password: '',
+})
 
 // 定义登录表单验证规则
 const loginRules = ref({
   username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
-  password: [{ required: true, message: '请输入密码', trigger: 'blur' }]
-});
+  password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+})
 
 // 定义登录错误信息
-const loginError = ref<string | null>(null);
+const loginError = ref<string | null>(null)
 
 // 定义登录方法
-const login = () => {
-
-};
+const login = () => {}
 </script>
 
 <style scoped lang="scss">

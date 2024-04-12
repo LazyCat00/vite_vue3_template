@@ -7,7 +7,7 @@ export const constantRoute = [
   },
   {
     // 登入成功后展示数据的路由
-    name: 'home',
+    name: 'layout',
     path: '/',
     component: () => import('@/views/home/index.vue'),
   },
